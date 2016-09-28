@@ -5,9 +5,13 @@ This library is inspired by the another similar project AECollectionView.  The A
 
 AECollapsableTableView defined the toggle method for a spefic section, so that the developers can trigger the toggle action conventiently. The section can be expanded by tapping the button in the header view. You can check detail in the sample project.
 
-Additionally,  here goes the other features you can utilize:
-Collpase all sections
-Expand all section
+Additionally,  here goes the features you can utilize:
+> - Set initial collapsable status of all sections in Interface Builder
+> - Collpase all sections
+> - Expand all sections
+> - Toggle a specific section
+> - Check whether a specific section is expanded
+> - Scroll to proper content offset after toggle a specific section
 
   
 
