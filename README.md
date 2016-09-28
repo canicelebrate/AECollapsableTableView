@@ -14,7 +14,7 @@ Additionally,  here goes the features you can utilize:
 > - Scroll to proper content offset after toggle a specific section
 
 ## Screenshot
-![AECollapsableTableView](http://oe817c0x9.bkt.clouddn.com/AECollapsableTableView.gif)
+![AECollapsableTableView](https://github.com/canicelebrate/AECollapsableTableView/blob/master/AECollapsableTableView.gif)
 
 ## Implementation
   Subclassed the UITableView and utilize methods:beginUpdate, endUpdate, insertRowsAtIndexPaths and deleteRowsAtIndexPaths to implement the collapse and expand behavor of the table view section.
