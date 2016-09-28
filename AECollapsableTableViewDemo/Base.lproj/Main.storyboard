@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m13-WA-29O">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AECollapsableTableView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="35Z-D4-Ve6" customClass="AECollapsableTableView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="szD-pn-dfH">
+                                        <rect key="frame" x="0.0" y="64" width="0.0" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="szD-pn-dfH" id="eKN-K0-jc3">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nok-Ob-7ez">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nok-Ob-7ez" firstAttribute="leading" secondItem="eKN-K0-jc3" secondAttribute="leading" constant="10" id="0Z6-IC-6Cr"/>
+                                                <constraint firstAttribute="trailing" secondItem="nok-Ob-7ez" secondAttribute="trailing" id="ByM-dt-oay"/>
+                                                <constraint firstAttribute="bottom" secondItem="nok-Ob-7ez" secondAttribute="bottom" id="mTq-Z0-agv"/>
+                                                <constraint firstItem="nok-Ob-7ez" firstAttribute="top" secondItem="eKN-K0-jc3" secondAttribute="top" id="on2-K7-AhN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="initialCollapsedAll" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Vm7-ud-PkF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MyD-H5-MLS"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gYM-yF-bhG">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohm-bG-pZs">
+                                        <state key="normal" title="Collapse All"/>
+                                        <connections>
+                                            <action selector="onCollapsedAllTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8M-1B-zVZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30h-iQ-2Dn">
+                                        <state key="normal" title="Expand All"/>
+                                        <connections>
+                                            <action selector="onExpandAllTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="quu-39-H4v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="JrW-bH-c2w"/>
+                                    <constraint firstItem="30h-iQ-2Dn" firstAttribute="height" secondItem="ohm-bG-pZs" secondAttribute="height" id="sH2-JP-BRi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="35Z-D4-Ve6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EHu-D6-0z6"/>
+                            <constraint firstItem="gYM-yF-bhG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ih1-Ip-0Vs"/>
+                            <constraint firstAttribute="bottom" secondItem="gYM-yF-bhG" secondAttribute="bottom" id="JDA-N0-iwb"/>
+                            <constraint firstAttribute="trailing" secondItem="gYM-yF-bhG" secondAttribute="trailing" id="M3f-x3-D6f"/>
+                            <constraint firstAttribute="trailing" secondItem="35Z-D4-Ve6" secondAttribute="trailing" id="NNX-7b-nMl"/>
+                            <constraint firstItem="gYM-yF-bhG" firstAttribute="top" secondItem="35Z-D4-Ve6" secondAttribute="bottom" id="vGi-MZ-WnD"/>
+                            <constraint firstItem="35Z-D4-Ve6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zMt-4J-dmP"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="AECollapsableTableView" id="6KH-W4-FAs"/>
+                    <connections>
+                        <outlet property="tableView" destination="35Z-D4-Ve6" id="J6x-Yh-0qW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="61.619190404797607"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nzW-J1-RyP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m13-WA-29O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DfX-nj-VL6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HYK-0F-lVN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4c-el-44E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.8000000000000007" y="-621.13943028485767"/>
         </scene>
     </scenes>
 </document>

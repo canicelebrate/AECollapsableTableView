@@ -15,6 +15,9 @@
 		C22197B61D9AD35400AA10E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22197B41D9AD35400AA10E2 /* LaunchScreen.storyboard */; };
 		C22197C11D9AD35400AA10E2 /* AECollapsableTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C22197C01D9AD35400AA10E2 /* AECollapsableTableViewDemoTests.m */; };
 		C22197CC1D9AD35400AA10E2 /* AECollapsableTableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C22197CB1D9AD35400AA10E2 /* AECollapsableTableViewDemoUITests.m */; };
+		C22197E11D9B997000AA10E2 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C22197E01D9B997000AA10E2 /* HeaderView.xib */; };
+		C22197E41D9BC22E00AA10E2 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22197E31D9BC22E00AA10E2 /* HeaderView.m */; };
+		C22197E81D9BC26C00AA10E2 /* AECollapsableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22197E71D9BC26C00AA10E2 /* AECollapsableTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		C22197C71D9AD35400AA10E2 /* AECollapsableTableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AECollapsableTableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22197CB1D9AD35400AA10E2 /* AECollapsableTableViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AECollapsableTableViewDemoUITests.m; sourceTree = "<group>"; };
 		C22197CD1D9AD35400AA10E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C22197E01D9B997000AA10E2 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		C22197E21D9BC22E00AA10E2 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		C22197E31D9BC22E00AA10E2 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		C22197E61D9BC26C00AA10E2 /* AECollapsableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AECollapsableTableView.h; sourceTree = "<group>"; };
+		C22197E71D9BC26C00AA10E2 /* AECollapsableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AECollapsableTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		C221979A1D9AD35400AA10E2 = {
 			isa = PBXGroup;
 			children = (
+				C22197E51D9BC26C00AA10E2 /* AECollapsableTableView */,
 				C22197A51D9AD35400AA10E2 /* AECollapsableTableViewDemo */,
 				C22197BF1D9AD35400AA10E2 /* AECollapsableTableViewDemoTests */,
 				C22197CA1D9AD35400AA10E2 /* AECollapsableTableViewDemoUITests */,
@@ -101,6 +110,8 @@
 		C22197A51D9AD35400AA10E2 /* AECollapsableTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C22197E21D9BC22E00AA10E2 /* HeaderView.h */,
+				C22197E31D9BC22E00AA10E2 /* HeaderView.m */,
 				C22197A91D9AD35400AA10E2 /* AppDelegate.h */,
 				C22197AA1D9AD35400AA10E2 /* AppDelegate.m */,
 				C22197AC1D9AD35400AA10E2 /* ViewController.h */,
@@ -110,6 +121,7 @@
 				C22197B41D9AD35400AA10E2 /* LaunchScreen.storyboard */,
 				C22197B71D9AD35400AA10E2 /* Info.plist */,
 				C22197A61D9AD35400AA10E2 /* Supporting Files */,
+				C22197E01D9B997000AA10E2 /* HeaderView.xib */,
 			);
 			path = AECollapsableTableViewDemo;
 			sourceTree = "<group>";
@@ -138,6 +150,15 @@
 				C22197CD1D9AD35400AA10E2 /* Info.plist */,
 			);
 			path = AECollapsableTableViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		C22197E51D9BC26C00AA10E2 /* AECollapsableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				C22197E61D9BC26C00AA10E2 /* AECollapsableTableView.h */,
+				C22197E71D9BC26C00AA10E2 /* AECollapsableTableView.m */,
+			);
+			path = AECollapsableTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +228,7 @@
 				TargetAttributes = {
 					C22197A21D9AD35400AA10E2 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = U6F56T5F9L;
 						ProvisioningStyle = Automatic;
 					};
 					C22197BB1D9AD35400AA10E2 = {
@@ -249,6 +271,7 @@
 				C22197B61D9AD35400AA10E2 /* LaunchScreen.storyboard in Resources */,
 				C22197B31D9AD35400AA10E2 /* Assets.xcassets in Resources */,
 				C22197B11D9AD35400AA10E2 /* Main.storyboard in Resources */,
+				C22197E11D9B997000AA10E2 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C22197AE1D9AD35400AA10E2 /* ViewController.m in Sources */,
+				C22197E41D9BC22E00AA10E2 /* HeaderView.m in Sources */,
+				C22197E81D9BC26C00AA10E2 /* AECollapsableTableView.m in Sources */,
 				C22197AB1D9AD35400AA10E2 /* AppDelegate.m in Sources */,
 				C22197A81D9AD35400AA10E2 /* main.m in Sources */,
 			);
@@ -422,7 +447,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U6F56T5F9L;
 				INFOPLIST_FILE = AECollapsableTableViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amberease.AECollapsableTableViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,7 +460,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U6F56T5F9L;
 				INFOPLIST_FILE = AECollapsableTableViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amberease.AECollapsableTableViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
