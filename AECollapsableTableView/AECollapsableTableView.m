@@ -45,6 +45,12 @@
             if(self.initialCollapsedAll){
                 value = @NO;
             }
+            else{
+                BOOL isCollapsedSection = [self.initialCollapsedStatus[@(i)] boolValue];
+                if(isCollapsedSection){
+                    value = @NO;
+                }
+            }
             [_expandedSections addObject:value];
         }
     }

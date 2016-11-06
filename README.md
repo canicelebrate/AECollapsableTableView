@@ -53,5 +53,10 @@ Please check more detail information in the sample project in this repository.
 [self.tableView toggleCollapsableSection:btn.tag];
 ```
 
+4. Speficy which sections you want them collapsed initially
+'''objective-c
+self.tableView.initialCollapsedStatus = @{@1:@YES};
+'''
+
 ## Meta
 Originally designed & built by William ([@canicelebrate](https://github.com/canicelebrate)). Distributed with the MIT license.

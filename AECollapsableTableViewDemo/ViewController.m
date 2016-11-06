@@ -26,6 +26,8 @@
                   @{@"title":@"header",@"data":@[@"item",@"item",@"item",@"item"]}];
     UINib* nib = [UINib nibWithNibName:@"HeaderView" bundle:nil];
     [self.tableView registerNib:nib forHeaderFooterViewReuseIdentifier:@"Header"];
+    
+    self.tableView.initialCollapsedStatus = @{@1:@YES};
 }
 
 
